@@ -1,6 +1,13 @@
 # SEO — fidestech.com.ar
 
-> **Nota metodológica:** el sitio devolvió HTTP 403 al fetch automatizado (probable bloqueo de bots o CDN). Recomiendo dar acceso a Google Search Console + Screaming Frog para auditoría profunda. Lo que sigue es el roadmap basado en mejores prácticas del rubro (PropTech / seguridad residencial Argentina) y en lo que sé del producto.
+> **Stack confirmado:** WordPress + Google Site Kit (Search Console + GA4 + PageSpeed + Tag Manager conectados). El sitio devolvió 403 al fetch automatizado — no es un problema (es una protección anti-bot estándar) salvo que también esté bloqueando Googlebot, lo cual chequeamos en el paso 0.
+>
+> **Datos reales que ya están disponibles vía Site Kit y que pido para afinar este plan:**
+> 1. Search Console → Performance → exportar últimos 90 días (queries, pages, CTR, posición).
+> 2. Search Console → Coverage → cuántas páginas indexadas vs descubiertas/excluidas.
+> 3. GA4 → Acquisition → Organic Search → top landing pages + conversiones.
+> 4. PageSpeed Insights → score mobile y desktop de la home + página de Concierge.
+> 5. Plugins SEO instalados (Yoast / Rank Math / SEOPress / ninguno).
 
 ---
 
@@ -134,22 +141,47 @@ Cada post: 1.200-1.800 palabras, 1 imagen propia mínimo, CTA al form correspond
 
 ---
 
-## 7. Roadmap sugerido — 90 días
+## 7. Stack WordPress recomendado
 
-| Semana | Acción |
-|--------|--------|
-| 1-2 | Auditoría técnica con acceso (Search Console + Screaming Frog). Resolver el 403 si afecta a Googlebot. |
-| 3-4 | Reescribir titles, meta descriptions y H1 de páginas existentes. Implementar schema básico. |
-| 5-8 | Crear URLs de plan Silver, plan Gold y subpáginas del kit. Migrar contenido y redireccionar viejas si hace falta. |
-| 9-12 | Publicar los primeros 6 posts del blog. Setear Google Business Profile y primeros directorios. |
-| 13+ | Medir, iterar, salir a buscar backlinks de medios. |
+| Función | Plugin recomendado | Por qué |
+|---------|--------------------|---------|
+| SEO on-page | **Rank Math** (gratis) o Yoast SEO | Rank Math tiene más features en su versión gratis (schema avanzado, redirecciones, 404 monitor). Si ya usás Yoast, no migres. |
+| Cache + performance | **WP Rocket** (paga, ~50 USD/año) o LiteSpeed Cache (gratis si el hosting es LiteSpeed) | Mejora directa de Core Web Vitals. |
+| Imágenes | **ShortPixel** o Smush | Conversión automática a WebP, lazy load. |
+| Schema avanzado | viene en Rank Math; si usás Yoast, sumar **Schema Pro** | Para Service, Product, FAQPage, LocalBusiness. |
+| Redirecciones 301 | **Redirection** (gratis) o el módulo de Rank Math | Cuando reorganices URLs. |
+| Backups | **UpdraftPlus** | Antes de tocar nada estructural. |
+
+⚠️ **Antes de instalar nada nuevo:** chequear qué plugins SEO ya están activos. Tener Yoast + Rank Math al mismo tiempo rompe todo.
+
+## 8. Roadmap sugerido — 90 días (revisado con Site Kit)
+
+| Semana | Acción | Herramienta |
+|--------|--------|-------------|
+| 0 | **Paso cero:** en Search Console → URL Inspection → probar `https://www.fidestech.com.ar/` y confirmar "URL is on Google". Si no, el 403 está afectando a Googlebot y hay que liberar el user-agent en el WAF/hosting. | Site Kit / Search Console |
+| 1 | Exportar de Search Console las 50 queries top + 20 páginas top de los últimos 90 días. Análisis de gaps vs keywords objetivo de este doc. | Site Kit |
+| 1-2 | Auditoría técnica: PageSpeed (mobile/desktop), Coverage en Search Console, sitemap activo. Instalar/configurar Rank Math si no hay SEO plugin. | Site Kit + Rank Math |
+| 3-4 | Reescribir titles, meta descriptions y H1 de páginas existentes (con Rank Math editor). Implementar schema Organization + Service + Product. | Rank Math |
+| 5-8 | Crear URLs de plan Silver, plan Gold y subpáginas del kit (templates WP). Redireccionar URLs viejas con plugin Redirection. | WP + Redirection |
+| 9-12 | Publicar los primeros 6 posts del blog (CPT "post" estándar). Setear Google Business Profile y primeros directorios. | WP + GBP |
+| 13+ | Medir en Site Kit semanal: posición media + clicks orgánicos + conversiones GA4. Iterar contenidos según queries que ya rankean en posición 8-15 (los "quick wins"). | Site Kit |
+
+## 9. Quick wins específicos de Site Kit
+
+Una vez tengamos los datos:
+
+1. **Queries en posición 8-20** = oportunidad inmediata. Optimizar la página existente (mejorar title, sumar contenido, conseguir 1-2 backlinks internos) puede saltarlas al top 5 sin trabajo de cero.
+2. **Páginas con CTR <2% y posición top 10** = problema de title/meta description, no de contenido. Reescribir y medir en 30 días.
+3. **Páginas con alto bounce en GA4 viniendo de orgánico** = mismatch de intención. Revisar el copy del primer scroll.
+4. **Core Web Vitals en rojo en PageSpeed** = arreglar antes que cualquier contenido nuevo. Lo más común en WP: imágenes sin optimizar + tema pesado + falta de cache.
 
 ---
 
-## 8. Métricas a trackear
+## 10. Métricas a trackear (dashboard mensual en Site Kit)
 
 - **Tráfico orgánico mensual** (Search Console + GA4) — meta realista mes 6: 3x vs hoy.
 - **Posición media de keywords objetivo** — meta: 5 keywords top 10 en mes 6.
 - **CTR en SERP** — meta: >3% promedio.
-- **Conversiones del orgánico al form** — meta: >2% del tráfico orgánico llena form.
+- **Conversiones del orgánico al form** — meta: >2% del tráfico orgánico llena form. Configurar evento de conversión en GA4 sobre el submit del form.
 - **Páginas indexadas** vs creadas — gap = problema técnico.
+- **Core Web Vitals** (LCP < 2.5s, INP < 200ms, CLS < 0.1) — Site Kit los muestra directo.
