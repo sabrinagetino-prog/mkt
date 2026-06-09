@@ -57,14 +57,9 @@ Todos los torneos siguen la misma estructura. Esto baja la fricción de producci
 
 ---
 
-### Torneo 2 — IRT Standard, La Plata · 19–21 de junio
+### ~~Torneo 2 — IRT Standard, La Plata · 19–21 de junio~~ — parkeado
 
-> ⚠️ **A confirmar con la mamá:** se solapa con Ciudad Universitaria (13–21 jun). Verificar si son dos torneos distintos o si la fecha es otra. Si se confirma que son paralelos, tratarlo como cobertura de fin de semana intensiva.
-
-**Plan de producción (asumiendo torneo independiente):**
-- **Mié 17 jun:** mini-anuncio en story ("Fin de semana doble: La Plata.").
-- **19–21 jun:** stories del IRT, patrón fijo. Si Thiago no pudo asistir por solapamiento, **se cancela este bloque sin posteo** (mejor silencio que confusión).
-- **Lun 22 jun:** un solo post de cierre que sintetice los dos torneos del mes.
+Se solapaba con Ciudad Universitaria. Priorizamos Ciudad Universitaria por la oportunidad de sesión de fotos. La Plata queda en pausa hasta que se confirme con la mamá que es un torneo independiente.
 
 ---
 
@@ -185,6 +180,8 @@ Todos los torneos siguen la misma estructura. Esto baja la fricción de producci
 | 8 | ¿Puedo autorizar una visita desde afuera del país? | Sí. La autorización funciona desde donde estés: app, WhatsApp o llamada. Generás un QR que vence solo. |
 | 9 | ¿Cómo entran los repartidores y deliveries? | Con QR temporal de un solo uso, autorizado por el residente, registrado en el sistema. |
 | 10 | ¿La administración ve todos los eventos del edificio? | Sí, el administrador tiene un tablero con la actividad relevante: accesos, alertas y reportes mensuales. Sin invadir la privacidad de cada unidad. |
+| 11 | ¿Qué pasa si alguien muestra una foto mía desde el celular para entrar? | El sistema detecta vida real ("liveness"): pide microgestos imperceptibles y descarta cualquier intento con foto, video o máscara. Sólo abre con vos presente. |
+| 12 | ¿Mis datos biométricos están protegidos? | Tu rostro nunca se guarda como imagen. Se transforma en un patrón matemático único, encriptado, alojado en servidores en Argentina. No se puede reconstruir tu cara desde ese dato. |
 
 ### Plantilla de copy de cada story (Concierge)
 
