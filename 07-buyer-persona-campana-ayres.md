@@ -2,37 +2,37 @@
 
 ## 1. La síntesis en una frase
 
-**Ayres Haus Benavidez no vende un depto: vende una forma de vivir afuera. Fides es lo que la hace posible.**
+**Ayres Haus Benavidez y Fides Tech se unen para proponer una nueva forma de habitar Z Norte: una donde la arquitectura, el paisaje y la seguridad inteligente trabajan en conjunto para elevar la calidad de vida del barrio.**
 
-Sin guardia física, sin cuota country, sin sospecha cada vez que pasa alguien. La seguridad inteligente no se ve, no se cobra como sueldo y no te interrumpe la vida. Por eso el residente puede estar **afuera**: en la plaza, en la vereda, en el SUM, en el club Newman. Por eso las expensas pueden ser más bajas. Por eso un barrio joven puede sentirse maduro desde el día 1.
+Dos empresas serias, una visión común: integrar tecnología de vanguardia y diseño residencial premium desde el plano. El resultado es un proyecto que se adelanta a su tiempo y que aporta valor real tanto al residente como a la zona en la que se inserta.
 
-Este es el lugar donde Ayres y Fides convergen: **los dos prometen calidad de vida sin fricción**. Ayres la construye en ladrillo, paisaje y tecnología. Fides la sostiene 24/7 con protocolos invisibles.
+Este es el lugar donde Ayres y Fides convergen: **ambos creen que la calidad de vida se diseña, no se improvisa.** Ayres la construye en ladrillo, paisaje y tecnología. Fides la sostiene 24/7 con seguridad inteligente integrada.
 
 ---
 
 ## 2. Los 4 pilares del relato conjunto
 
-Estos pilares ordenan toda la comunicación de la campaña. Cualquier pieza tiene que tocar al menos uno.
+Cualquier pieza de la campaña tiene que tocar al menos uno.
 
 ### Pilar 1 — Vivir afuera
-Salir a la vereda. Llevar al perro sin pensar quién está mirando. Dejar al chico ir a la casa del vecino sin acompañarlo. El barrio invita a salir de casa, no a encerrarse en ella.
+El barrio se diseña para invitar a salir: paisajismo nativo, espacios verdes, vereda viva, comunidad. Una vida en contacto con la naturaleza y con el vecindario.
 
-> Ayres pone el espacio. Fides pone la tranquilidad.
+> Ayres construye el espacio que invita a salir. Fides sostiene la tranquilidad que permite quedarse afuera.
 
-### Pilar 2 — Sin guardia, con todos los ojos
-El barrio no tiene guardia física. Tiene algo mejor: una central con operadores entrenados, cámaras con reconocimiento facial, perímetro alarmado, protocolos para merodeo, intrusión, puertas forzadas. Lo que costaba 3 sueldos + aguinaldos + francos + reemplazos, ahora es un servicio que escala con el barrio.
+### Pilar 2 — Seguridad inteligente 24/7
+Tecnología de vanguardia trabajando todo el día, todos los días. Central de operadores entrenados, analítica de video, reconocimiento facial, control de accesos peatonal y vehicular, protocolos que anticipan. Una nueva categoría: la del barrio premium con seguridad integrada desde el plano.
 
-> Sin encargado. Sin sobresueldos. Sin franco. Sin licencias. Con presencia 24/7 real.
+> Presencia inteligente y constante. Diseñada para anticiparse.
 
-### Pilar 3 — Expensas que tienen sentido
-El barrio nace con seguridad inteligente integrada. No se suma como un parche caro después: ya está prevista en la masa de gastos comunes proyectada. El residente paga menos que en un country tradicional y recibe más que en un edificio común.
+### Pilar 3 — Tecnología que se traduce en valor
+La integración temprana entre arquitectura y tecnología optimiza la operación del barrio y eleva el valor del activo. La propiedad nace pensada para los próximos 30 años, no solo para la entrega.
 
-> Más barato que un country. Más seguro que un edificio.
+> Una decisión arquitectónica que también es una decisión patrimonial.
 
-### Pilar 4 — Tu casa decide quién entra
-Cerradura digital con huella + PIN + facial + app. El residente autoriza, revoca, vence accesos. El kinesiólogo de los jueves tiene PIN solo los jueves de 14 a 15. El inquilino temporal entra con QR que se quema el domingo. El delivery se le abre desde el sillón. Vos sos el que decide.
+### Pilar 4 — Vos al control de tu hogar
+Cerradura inteligente con huella, PIN, reconocimiento facial y app integrada en cada unidad. Autorización remota de visitas con QR temporal. Accesos diferenciados por residentes, familiares, profesionales o visitas puntuales. Comodidad y autonomía como estándar.
 
-> Tu casa nunca está abierta. Tampoco está cerrada. Sabe a quién dejar pasar.
+> Tu hogar reconoce a quien tiene que entrar. Y vos decidís desde donde estés.
 
 ---
 
@@ -76,8 +76,8 @@ Cerradura digital con huella + PIN + facial + app. El residente autoriza, revoca
 - "¿Cómo cuido al chico si yo no estoy y entra el plomero?"
 
 **Mensaje madre para Lucía y Federico:**
-> *"El barrio donde tu hijo puede salir a la vereda."*
-> Plaza, club a 200 metros, vecinos en el mismo momento que vos. Y un sistema que sabe quién está en cada acceso, antes que vos te enteres.
+> *"El barrio donde tu hijo crece afuera."*
+> Plaza, club a 200 metros, paisajismo nativo, vecinos en el mismo momento que vos. Y seguridad inteligente 24/7 cuidando cada acceso, para que la vida pase tranquila.
 
 ---
 
@@ -205,9 +205,9 @@ Cerradura digital con huella + PIN + facial + app. El residente autoriza, revoca
 
 ## 5. Concepto creativo de campaña — "VIVIR AFUERA"
 
-**Big idea:** *Vivir afuera. De las paredes. De la cuota country. Del miedo.*
+**Big idea:** *Vivir afuera. En contacto con la naturaleza, con tus vecinos, con tu barrio.*
 
-Vivimos puertas adentro porque afuera no se puede. Ayres Haus + Fides construyen un lugar donde eso se invierte. La vida pasa en la vereda, en la plaza, en el club. Adentro de casa se descansa, no se esconde uno.
+Una nueva forma de habitar Z Norte donde la vida pasa, también, en la vereda. En la plaza. En el club. En el SUM. Adentro de casa se descansa con la tranquilidad de saber que cada detalle del barrio fue pensado para cuidarte. Afuera, el paisajismo nativo, los espacios verdes y la comunidad hacen el resto.
 
 ### Cómo se ve esta campaña en piezas:
 

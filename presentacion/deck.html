@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fides Tech × Ayres Haus Benavidez</title>
+<style>
+@page { size: 297mm 210mm; margin: 0; }
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+:root {
+  --cr:#F5F0E6; --crlt:#FAF7F0; --crmd:#EDE7D9;
+  --nv:#1A2540; --nv2:#243255;
+  --gd:#B8956A; --gd2:#8E6F4A; --gd3:#D4B896;
+  --sg:#6B8068;
+  --ink:#1A1A1A; --mut:#7A7A7A; --rl:#DDD3C2;
+}
+
+body { font-family:Georgia,serif; background:var(--cr); color:var(--ink); }
+
+/* ── SLIDE SHELL ── */
+.slide {
+  width:297mm; height:210mm;
+  overflow:hidden;
+  page-break-after:always; break-after:page;
+  page-break-inside:avoid; break-inside:avoid;
+  display:flex; flex-direction:column;
+  background:var(--cr); position:relative;
+}
+.slide:last-child { page-break-after:auto; break-after:auto; }
+
+/* ── HEADER ── */
+.sh {
+  flex-shrink:0;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:5mm 17mm 4.5mm;
+  border-bottom:0.3mm solid var(--rl);
+  font-family:Helvetica,Arial,sans-serif; font-size:7pt;
+  letter-spacing:0.18em; text-transform:uppercase; color:var(--nv);
+}
+.sh .b { font-weight:700; }
+.sh .c { color:var(--mut); }
+
+/* ── FOOTER ── */
+.sf {
+  flex-shrink:0;
+  display:flex; justify-content:space-between;
+  padding:3.5mm 17mm 4mm;
+  border-top:0.2mm solid var(--rl);
+  font-family:Helvetica,Arial,sans-serif; font-size:6pt;
+  color:var(--mut); letter-spacing:0.08em;
+}
+
+/* ── CONTENT ── */
+.bd { flex:1; overflow:hidden; display:flex; flex-direction:column; padding:8mm 17mm 6mm; }
+
+/* ── TYPOGRAPHY ── */
+.kk { font-family:Helvetica,Arial,sans-serif; font-size:7pt; font-weight:700; letter-spacing:0.36em; text-transform:uppercase; color:var(--gd2); margin-bottom:3mm; }
+.h1 { font-family:Georgia,serif; font-weight:400; line-height:1.05; color:var(--nv); }
+.h1.xl { font-size:44pt; }
+.h1.lg { font-size:34pt; }
+.h1.md { font-size:27pt; }
+.h1.sm { font-size:22pt; }
+.h1 em { font-style:italic; color:var(--gd2); }
+.sbh { font-family:Helvetica,Arial,sans-serif; font-size:8pt; font-weight:700; letter-spacing:0.1em; color:var(--nv); text-transform:uppercase; margin-bottom:2mm; }
+.bt { font-family:Georgia,serif; font-size:9.5pt; line-height:1.55; color:var(--ink); margin-bottom:3.5mm; }
+.bt:last-child { margin-bottom:0; }
+.lt { font-family:Georgia,serif; font-size:13pt; line-height:1.42; color:var(--nv2); font-style:italic; margin-bottom:4mm; }
+
+/* ── LAYOUT ── */
+.tc { display:flex; gap:11mm; flex:1; }
+.tc .col { flex:1; display:block; }
+.3c { display:flex; gap:7mm; flex:1; }
+.grow { flex:1; }
+
+/* ── COVER ── */
+.slide.cover { background:var(--nv); }
+.cvi { flex:1; display:flex; flex-direction:column; padding:13mm 18mm; position:relative; overflow:hidden; }
+.cv-brand { font-family:Helvetica,Arial,sans-serif; font-size:7pt; letter-spacing:0.45em; text-transform:uppercase; color:var(--gd); }
+.cv-rule { width:16mm; height:0.25mm; background:var(--gd); margin:5.5mm 0; opacity:0.55; }
+.cvi h1 { font-family:Georgia,serif; font-size:46pt; line-height:1.02; font-weight:400; color:var(--cr); }
+.cvi h1 em { font-style:italic; color:var(--gd); }
+.cv-sub { font-family:Georgia,serif; font-style:italic; font-size:13.5pt; color:var(--cr); margin-top:5.5mm; opacity:0.82; max-width:162mm; line-height:1.42; }
+.cv-meta { margin-top:auto; display:flex; justify-content:space-between; align-items:flex-end; }
+.cv-date { font-family:Helvetica,Arial,sans-serif; font-size:7pt; letter-spacing:0.28em; text-transform:uppercase; color:var(--gd); }
+.cv-logos { font-family:Georgia,serif; font-style:italic; font-size:12.5pt; color:rgba(245,240,230,.86); }
+.deco1 { position:absolute; right:18mm; top:13mm; width:33mm; height:33mm; border:0.25mm solid rgba(184,149,106,.32); border-radius:50%; }
+.deco1::after { content:""; position:absolute; inset:7mm; border:0.2mm solid rgba(184,149,106,.18); border-radius:50%; }
+.deco2 { position:absolute; right:27mm; top:22mm; width:54mm; height:54mm; border:0.15mm solid rgba(184,149,106,.1); border-radius:50%; }
+
+/* ── CHAPTER ── */
+.slide.chap { background:var(--nv); }
+.chi { flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding:13mm 18mm; position:relative; overflow:hidden; }
+.ch-ghost { position:absolute; top:-8mm; right:8mm; font-family:Georgia,serif; font-size:120pt; color:rgba(184,149,106,.09); line-height:1; font-weight:400; letter-spacing:-2pt; pointer-events:none; }
+.ch-label { font-family:Helvetica,Arial,sans-serif; font-size:7pt; letter-spacing:0.36em; text-transform:uppercase; color:var(--gd); margin-bottom:4mm; }
+.ch-title { font-family:Georgia,serif; font-size:48pt; line-height:1; color:var(--cr); font-weight:400; margin-bottom:5mm; }
+.ch-sub { font-family:Georgia,serif; font-style:italic; font-size:12pt; color:var(--gd3); max-width:192mm; line-height:1.45; }
+
+/* ── PILLAR CARD ── */
+.pc { background:var(--crlt); border-left:0.7mm solid var(--gd); border:0.2mm solid var(--rl); border-left-width:0.7mm; border-radius:1.5mm; padding:4.5mm 5mm; display:flex; flex-direction:column; }
+.pc .pn { font-family:Georgia,serif; font-style:italic; font-size:15pt; color:var(--gd); line-height:1; margin-bottom:1.5mm; }
+.pc .pt { font-family:Georgia,serif; font-size:12pt; color:var(--nv); line-height:1.2; margin-bottom:2mm; }
+.pc .pb { background:transparent; border:none; border-radius:0; padding:0; font-family:Georgia,serif; font-size:8.5pt; line-height:1.5; color:var(--ink); }
+.pc .ptg { font-family:Georgia,serif; font-style:italic; font-size:7.5pt; color:var(--gd2); margin-top:3mm; padding-top:2.5mm; border-top:0.2mm solid var(--rl); }
+.g2x2 { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+.g1x3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:5.5mm; }
+
+/* ── PERSONA ── */
+.phero { display:flex; align-items:baseline; gap:3.5mm; margin-bottom:3.5mm; }
+.phero .pnum { font-family:Georgia,serif; font-style:italic; font-size:26pt; color:var(--gd); line-height:1; flex-shrink:0; }
+.phero .pname { font-family:Georgia,serif; font-size:21pt; color:var(--nv); line-height:1.1; }
+.phero .pdesc { font-family:Helvetica,Arial,sans-serif; font-size:7.5pt; color:var(--mut); margin-top:1mm; line-height:1.4; }
+.pgrid { display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-bottom:3mm; }
+.pb { background:var(--crlt); border:0.2mm solid var(--rl); border-radius:1.5mm; padding:3mm 4mm; }
+.pb h4 { font-family:Helvetica,Arial,sans-serif; font-size:6pt; font-weight:700; letter-spacing:0.28em; color:var(--gd2); text-transform:uppercase; margin-bottom:2mm; }
+.pb ul { list-style:none; }
+.pb li { font-family:Georgia,serif; font-size:8pt; line-height:1.42; color:var(--ink); padding-left:3mm; position:relative; margin-bottom:1mm; }
+.pb li::before { content:"—"; position:absolute; left:0; color:var(--gd); font-size:7pt; }
+.pmsg { background:var(--nv); border-radius:1.5mm; padding:3mm 5mm; display:flex; gap:7mm; align-items:flex-start; }
+.pmsg .pml { font-family:Helvetica,Arial,sans-serif; font-size:5.5pt; letter-spacing:0.28em; text-transform:uppercase; color:var(--gd); flex-shrink:0; padding-top:1.5mm; white-space:nowrap; }
+.pmsg .pmh { font-family:Georgia,serif; font-style:italic; font-size:10.5pt; line-height:1.3; color:var(--cr); margin-bottom:1.5mm; }
+.pmsg .pmb { font-family:Georgia,serif; font-size:8pt; line-height:1.44; color:rgba(245,240,230,.8); }
+
+/* ── CONNECTOR ── */
+.conn { display:grid; grid-template-columns:1fr 22mm 1fr; margin-top:4mm; }
+.conn .cth { font-family:Helvetica,Arial,sans-serif; font-size:7pt; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--gd2); padding:2.5mm 3mm; border-bottom:0.3mm solid var(--nv); }
+.conn .cth.ctr { text-align:center; }
+.conn .ca { padding:2.5mm 3mm; font-family:Georgia,serif; font-size:9pt; line-height:1.44; color:var(--ink); border-bottom:0.2mm solid var(--rl); border-right:0.2mm solid var(--rl); }
+.conn .cf { padding:2.5mm 3mm; font-family:Georgia,serif; font-size:9pt; line-height:1.44; color:var(--ink); border-bottom:0.2mm solid var(--rl); border-left:0.2mm solid var(--rl); }
+.conn .cx { padding:2mm 3mm; font-family:Georgia,serif; font-style:italic; font-size:13pt; color:var(--gd); text-align:center; border-bottom:0.2mm solid var(--rl); display:flex; align-items:center; justify-content:center; }
+
+/* ── POST MOCKUP ── */
+.posts-row { display:flex; gap:5mm; flex:1; }
+.pm { flex:1; background:white; border:0.2mm solid var(--rl); border-radius:2mm; overflow:hidden; display:flex; flex-direction:column; }
+.pm .pmh2 { display:flex; align-items:center; gap:2mm; padding:2mm 3mm; border-bottom:0.2mm solid var(--rl); }
+.pm .pmh2 .av { width:4.5mm; height:4.5mm; border-radius:50%; background:var(--nv); color:var(--cr); display:flex; align-items:center; justify-content:center; font-family:Helvetica,Arial,sans-serif; font-weight:700; font-size:4.5pt; flex-shrink:0; }
+.pm .pmh2 .av.g2 { background:var(--gd); color:var(--nv); }
+.pm .pmh2 .hn { font-family:Helvetica,Arial,sans-serif; font-weight:700; font-size:6.5pt; color:var(--ink); }
+.pm .pmh2 .tp { font-family:Helvetica,Arial,sans-serif; font-size:5.5pt; color:var(--mut); }
+.pm .pimg { background:var(--crmd); flex:1; display:flex; align-items:center; justify-content:center; text-align:center; padding:4mm; min-height:38mm; }
+.pm .pimg.dk { background:var(--nv); }
+.pm .pimg.gd2 { background:var(--gd); }
+.pm .pimg .it { font-family:Georgia,serif; font-style:italic; font-size:10pt; line-height:1.3; color:var(--nv); }
+.pm .pimg.dk .it { color:var(--cr); }
+.pm .pimg.gd2 .it { color:var(--nv); }
+.pm .pimg .it.big { font-size:13pt; }
+.pm .ptag2 { font-family:Helvetica,Arial,sans-serif; font-size:5.5pt; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--gd2); background:var(--cr); padding:0.8mm 2mm; border-radius:0.8mm; display:inline-block; margin:1.5mm 0 0.5mm 3mm; }
+.pm .pcap { padding:2mm 3mm 3mm; border-top:0.2mm solid var(--rl); font-family:Helvetica,Arial,sans-serif; font-size:5.5pt; line-height:1.5; color:var(--mut); }
+.pm .pcap .cc { font-family:Georgia,serif; font-style:italic; font-size:7pt; color:var(--nv); margin-bottom:1mm; line-height:1.4; }
+
+/* ── AD FRAMES ── */
+.adb { display:flex; flex-direction:column; gap:3mm; flex:1; }
+.adr { display:flex; gap:3mm; flex:1; }
+.af { flex:1; background:var(--crlt); border:0.2mm solid var(--rl); border-radius:1.5mm; padding:3mm 3.5mm; }
+.af.dk { background:var(--nv); }
+.af.gd3 { background:var(--gd); }
+.af .afl { font-family:Helvetica,Arial,sans-serif; font-size:5.5pt; letter-spacing:0.22em; text-transform:uppercase; color:var(--gd2); margin-bottom:1.5mm; font-weight:700; }
+.af.dk .afl { color:var(--gd3); }
+.af.gd3 .afl { color:rgba(26,37,64,.65); }
+.af .afc { font-family:Georgia,serif; font-size:8.5pt; line-height:1.45; color:var(--ink); }
+.af.dk .afc { color:var(--cr); font-size:9pt; }
+.af.gd3 .afc { color:var(--nv); font-size:9pt; }
+.admeta { display:flex; gap:2.5mm; font-family:Helvetica,Arial,sans-serif; font-size:6.5pt; color:var(--mut); margin-bottom:2.5mm; flex-wrap:wrap; }
+.admeta span { padding:0.8mm 2mm; background:var(--crlt); border-radius:1mm; }
+.admeta strong { color:var(--nv); }
+
+/* ── ROADMAP ── */
+.rm { display:flex; flex-direction:column; flex:1; justify-content:space-between; }
+.rmr { display:grid; grid-template-columns:43mm 1fr; gap:4mm; padding:3mm 0; border-bottom:0.2mm solid var(--rl); }
+.rmr:last-child { border-bottom:none; }
+.rmph { font-family:Helvetica,Arial,sans-serif; font-size:6pt; letter-spacing:0.22em; text-transform:uppercase; color:var(--gd2); font-weight:700; }
+.rmph .rpn { display:block; font-family:Georgia,serif; font-style:italic; font-size:11pt; letter-spacing:0; text-transform:none; color:var(--nv); margin-top:1.5mm; line-height:1.2; }
+.rmac { font-family:Georgia,serif; font-size:8.5pt; line-height:1.5; color:var(--ink); }
+
+/* ── BIG QUOTE ── */
+.bigq { flex:1; display:flex; flex-direction:column; justify-content:center; }
+.bigq .qm { font-family:Georgia,serif; font-size:60pt; color:var(--gd); line-height:0.6; margin-bottom:6mm; }
+.bigq .qt { font-family:Georgia,serif; font-style:italic; font-size:26pt; line-height:1.2; color:var(--nv); max-width:235mm; }
+.bigq .qa { font-family:Helvetica,Arial,sans-serif; font-size:7pt; letter-spacing:0.3em; text-transform:uppercase; color:var(--gd2); margin-top:6mm; }
+
+/* ── KPI ── */
+.kpi2x2 { display:grid; grid-template-columns:1fr 1fr; gap:3.5mm; }
+.kti { background:var(--crlt); border:0.2mm solid var(--rl); border-radius:1.5mm; padding:3.5mm 4mm; }
+.kti .kn { font-family:Helvetica,Arial,sans-serif; font-size:6pt; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--gd2); margin-bottom:1.5mm; }
+.kti .kt { font-family:Georgia,serif; font-style:italic; font-size:12.5pt; color:var(--nv); line-height:1.2; }
+.kti .kd { font-family:Georgia,serif; font-size:7.5pt; color:var(--mut); margin-top:1.5mm; line-height:1.4; }
+
+/* ── DASH LIST ── */
+.dl { list-style:none; }
+.dl li { font-family:Georgia,serif; font-size:9pt; line-height:1.5; padding-left:4mm; position:relative; margin-bottom:2mm; color:var(--ink); }
+.dl li::before { content:"—"; position:absolute; left:0; color:var(--gd); font-size:8pt; }
+
+/* ── CALLOUT ── */
+.callout { background:var(--crlt); border-left:0.7mm solid var(--gd); padding:3.5mm 5mm; border-radius:0 1.5mm 1.5mm 0; margin-top:4mm; }
+.callout p { font-family:Georgia,serif; font-style:italic; font-size:10.5pt; color:var(--nv); line-height:1.35; }
+
+/* ── FINAL ── */
+.slide.final { background:var(--nv); }
+.fii { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:13mm 18mm; text-align:center; }
+.fii h1 { font-family:Georgia,serif; font-style:italic; font-size:36pt; line-height:1.15; color:var(--gd); max-width:218mm; }
+.fii p { font-family:Georgia,serif; font-size:12.5pt; color:var(--cr); margin-top:8mm; opacity:.86; max-width:175mm; line-height:1.45; }
+.fii .rule { width:15mm; height:0.25mm; background:var(--gd); margin:9mm auto; opacity:.42; }
+.fii .sig { font-family:Helvetica,Arial,sans-serif; font-size:7.5pt; letter-spacing:0.32em; text-transform:uppercase; color:var(--gd); }
+</style>
+</head>
+<body>
+
+<!-- ===== SLIDE 01 — COVER ===== -->
+<div class="slide cover">
+  <div class="cvi">
+    <div class="deco2"></div><div class="deco1"></div>
+    <div class="cv-brand">Fides Tech &nbsp;·&nbsp; Ayres Desarrollos</div>
+    <div class="cv-rule"></div>
+    <h1>Una nueva forma<br>de habitar <em>Benavidez</em>.</h1>
+    <div class="cv-sub">Propuesta de campaña conjunta para Ayres Haus Benavidez × Concierge by Fides Tech.</div>
+    <div class="cv-meta">
+      <div class="cv-date">Documento estratégico · 2026</div>
+      <div class="cv-logos">Fides Tech &nbsp;×&nbsp; Ayres Desarrollos</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 02 — CHAPTER I ===== -->
+<div class="slide chap">
+  <div class="chi">
+    <div class="ch-ghost">I</div>
+    <div class="ch-label">Capítulo I</div>
+    <div class="ch-title">El partnership.</div>
+    <div class="ch-sub">Dos compañías serias buscando elevar el estándar residencial de Z Norte.</div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 03 — El punto de partida ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. I · El partnership</span><span class="c">El punto de partida</span></div>
+  <div class="bd">
+    <div class="tc">
+      <div class="col">
+        <div class="kk">Lo que está pasando hoy</div>
+        <div class="h1 lg" style="margin-bottom:6mm;">Algo nuevo está <em>llegando</em> a Benavidez.</div>
+        <p class="bt">Ayres Desarrollos inicia la comunicación de Distrito Ayres Benavidez con una pieza teaser: <em>"Algo nuevo está llegando."</em> El terreno ya está preparado.</p>
+        <p class="bt" style="margin-top:4mm;">Fides Tech entra en la mesa en el mejor momento posible: cuando el barrio se está pensando, no cuando está construido. Eso nos permite integrar la seguridad inteligente al ADN del proyecto, no como un servicio agregado al final.</p>
+      </div>
+      <div class="col">
+        <div class="kk">Lo que proponemos sumar</div>
+        <div class="h1 lg" style="margin-bottom:6mm;">Una <em>capa de calidad</em> que se integra al relato.</div>
+        <p class="bt">No reemplazamos el discurso de Ayres. Lo profundizamos. Sumamos una dimensión que hace al teaser todavía más sólido: <em>lo nuevo también es nuevo en cómo se cuida, cómo se vive y cómo se valora a futuro.</em></p>
+        <p class="bt" style="margin-top:4mm;">Dos compañías, una visión compartida sobre lo que significa hacer las cosas en serio.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>03 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 04 — La oportunidad ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. I · El partnership</span><span class="c">La oportunidad</span></div>
+  <div class="bd">
+    <div class="kk">Por qué este partnership es estratégico</div>
+    <div class="h1 md" style="margin-bottom:3mm;">Fides cubre <em>2 de los 5 pilares</em> del proyecto.</div>
+    <p class="bt" style="margin-bottom:6mm;">El brochure de Ayres Haus declara cinco pilares de diseño: <strong>Urbanismo, Paisajismo, Seguridad, Tecnología y Sustentabilidad.</strong> Fides Tech es co-responsable de dos de ellos. Eso convierte este partnership en <em>co-autoría</em> del estándar de vida del distrito.</p>
+
+    <div class="g1x3" style="margin-top:4mm;">
+      <div class="pc">
+        <div class="pn">01</div>
+        <div class="pt">Seguridad inteligente integrada desde el plano.</div>
+        <div class="pb">Perímetro, accesos vehiculares y peatonales, reconocimiento facial y central 24/7 pensados antes del primer ladrillo.</div>
+        <div class="ptg">El proyecto nació con Fides adentro.</div>
+      </div>
+      <div class="pc" style="border-left-color:var(--sg);">
+        <div class="pn">02</div>
+        <div class="pt">Tecnología residencial en cada unidad.</div>
+        <div class="pb">Cerradura digital con huella, PIN y app. Preinstalación de domótica. Cargador para auto eléctrico. Listo para los próximos 30 años.</div>
+        <div class="ptg">Estándar de fábrica, no un extra.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">03</div>
+        <div class="pt">Valor patrimonial y de zona.</div>
+        <div class="pb">Un proyecto que eleva el estándar del barrio entero. La revalorización no es promesa: es matemática urbana.</div>
+        <div class="ptg">Todos los vecinos ganan con el desarrollo.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>04 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 05 — La síntesis ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. I · El partnership</span><span class="c">La síntesis</span></div>
+  <div class="bd">
+    <div class="bigq">
+      <div class="qm">"</div>
+      <div class="qt">Ayres y Fides creemos que la calidad de vida se <em style="color:var(--gd2);">diseña</em>, no se improvisa. Por eso construimos juntos una nueva forma de habitar Benavidez.</div>
+      <div class="qa">La idea madre de la campaña</div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>05 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 06 — CHAPTER II ===== -->
+<div class="slide chap">
+  <div class="chi">
+    <div class="ch-ghost">II</div>
+    <div class="ch-label">Capítulo II</div>
+    <div class="ch-title">El concepto.</div>
+    <div class="ch-sub">"Vivir afuera." Una idea simple que ordena toda la comunicación conjunta.</div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 07 — Vivir afuera ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. II · El concepto</span><span class="c">Big idea</span></div>
+  <div class="bd">
+    <div class="tc">
+      <div class="col" style="justify-content:center;">
+        <div class="kk">Concepto creativo</div>
+        <div class="h1 xl" style="font-size:72pt; line-height:0.95; margin-top:2mm;">Vivir<br><em>afuera</em>.</div>
+      </div>
+      <div class="col" style="justify-content:center;">
+        <p class="lt" style="margin-bottom:6mm;">En contacto con la naturaleza, con tus vecinos, con tu barrio.</p>
+        <p class="bt">Una nueva forma de habitar Z Norte donde la vida pasa, también, en la vereda. En la plaza. En el club. En el SUM.</p>
+        <p class="bt" style="margin-top:4mm;">Adentro de casa se descansa con la tranquilidad de saber que cada detalle del barrio fue pensado para cuidarte. Afuera, el paisajismo nativo, los espacios verdes y la comunidad hacen el resto.</p>
+        <p class="bt" style="margin-top:4mm; color:var(--gd2); font-style:italic;">Vivir afuera, otra vez.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>07 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 08 — Los 4 pilares ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. II · El concepto</span><span class="c">Los 4 pilares</span></div>
+  <div class="bd">
+    <div class="kk">Los pilares del relato conjunto</div>
+    <div class="h1 md" style="margin-bottom:3mm;">Toda pieza toca al menos <em>uno</em>.</div>
+    <div class="g2x2" style="flex:1; margin-top:2mm;">
+      <div class="pc">
+        <div class="pn">01</div>
+        <div class="pt">Vivir afuera</div>
+        <div class="pb">El barrio se diseña para invitar a salir: paisajismo nativo, espacios verdes, vereda viva, comunidad real.</div>
+        <div class="ptg">Ayres construye el espacio. Fides sostiene la tranquilidad.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">02</div>
+        <div class="pt">Seguridad inteligente 24/7</div>
+        <div class="pb">Central operativa con personal entrenado, analítica de video, protocolos que anticipan. Diseñada para adelantarse, no para reaccionar.</div>
+        <div class="ptg">Presencia constante. Siempre activa.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">03</div>
+        <div class="pt">Tecnología que se traduce en valor</div>
+        <div class="pb">La integración temprana eleva el valor del activo. La propiedad nace pensada para los próximos 30 años.</div>
+        <div class="ptg">Una decisión arquitectónica y patrimonial.</div>
+      </div>
+      <div class="pc">
+        <div class="pn">04</div>
+        <div class="pt">Vos al control de tu hogar</div>
+        <div class="pb">Cerradura con huella, PIN, facial y app. Autorización remota de visitas con QR temporal. Vos decidís desde donde estés.</div>
+        <div class="ptg">Tu hogar reconoce a quien tiene que entrar.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>08 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 09 — Pilar 1 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. II · El concepto</span><span class="c">Pilar 1 — Vivir afuera</span></div>
+  <div class="bd">
+    <div class="tc">
+      <div class="col" style="justify-content:center; max-width:100mm;">
+        <div class="kk">Pilar 01</div>
+        <div class="h1 lg" style="margin-bottom:5mm;">El barrio invita a <em>salir</em>.</div>
+        <p class="lt">La vida también pasa en la vereda.</p>
+      </div>
+      <div class="col" style="justify-content:center;">
+        <p class="bt">23.000 m² pensados para que el residente pase tiempo afuera de su unidad. Paisajismo nativo del Estudio Juli Markl, plazas internas, espacios verdes, SUM, piscina, y el Club Newman a 200 metros del acceso principal.</p>
+        <p class="bt" style="margin-top:4mm;">La arquitectura, el paisaje y la seguridad inteligente trabajan juntas para que vivir afuera sea simple, natural y tranquilo.</p>
+        <div class="callout">
+          <p>"Ayres construye el espacio que invita a salir. Fides sostiene la tranquilidad que permite quedarse afuera."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>09 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 10 — Pilar 2 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. II · El concepto</span><span class="c">Pilar 2 — Seguridad inteligente 24/7</span></div>
+  <div class="bd">
+    <div class="tc">
+      <div class="col" style="justify-content:center; max-width:100mm;">
+        <div class="kk">Pilar 02</div>
+        <div class="h1 lg" style="margin-bottom:5mm;">Tecnología de vanguardia <em>todo el día</em>.</div>
+        <p class="lt">Una nueva categoría de seguridad residencial premium.</p>
+      </div>
+      <div class="col" style="justify-content:center;">
+        <p class="bt">Central operativa propia con personal entrenado que conoce el barrio. Analítica de video sobre todo el perímetro. Reconocimiento facial para residentes. Control de acceso vehicular por patente. Protocolos que se activan antes de que un evento se convierta en problema.</p>
+        <p class="bt" style="margin-top:4mm;">Diseñada para anticiparse, no para reaccionar.</p>
+        <div class="callout">
+          <p>"Presencia inteligente y constante. Operadores que conocen el barrio antes de que llegue el primer residente."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>10 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 11 — Pilar 3 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. II · El concepto</span><span class="c">Pilar 3 — Tecnología que se traduce en valor</span></div>
+  <div class="bd">
+    <div class="tc">
+      <div class="col" style="justify-content:center; max-width:100mm;">
+        <div class="kk">Pilar 03</div>
+        <div class="h1 lg" style="margin-bottom:5mm;">Una decisión <em>patrimonial</em>.</div>
+        <p class="lt">El proyecto nace pensado para los próximos 30 años.</p>
+      </div>
+      <div class="col" style="justify-content:center;">
+        <p class="bt">La integración temprana entre arquitectura y tecnología optimiza la operación del distrito y eleva el valor del activo. Cerradura inteligente, preinstalación domótica, cargador para autos eléctricos y termotanque solar incluidos en cada unidad desde fábrica.</p>
+        <p class="bt" style="margin-top:4mm;">Una propiedad lista para el futuro en un barrio que crece con la zona.</p>
+        <div class="callout">
+          <p>"Una decisión arquitectónica que también es una decisión patrimonial."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>11 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 12 — Pilar 4 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. II · El concepto</span><span class="c">Pilar 4 — Vos al control de tu hogar</span></div>
+  <div class="bd">
+    <div class="tc">
+      <div class="col" style="justify-content:center; max-width:100mm;">
+        <div class="kk">Pilar 04</div>
+        <div class="h1 lg" style="margin-bottom:5mm;">Tu casa reconoce a <em>quien tiene que entrar</em>.</div>
+        <p class="lt">Comodidad y autonomía como estándar.</p>
+      </div>
+      <div class="col" style="justify-content:center;">
+        <p class="bt">Cerradura digital con huella, PIN y reconocimiento facial. App integrada para autorizar visitas con un toque. QR temporal con vencimiento automático para invitados puntuales. PIN por horario para profesionales recurrentes.</p>
+        <p class="bt" style="margin-top:4mm;">Vos decidís quién entra, desde donde estés.</p>
+        <div class="callout">
+          <p>"Tu hogar reconoce a quien tiene que entrar. Y vos decidís desde donde estés."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>12 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 13 — CHAPTER III ===== -->
+<div class="slide chap">
+  <div class="chi">
+    <div class="ch-ghost">III</div>
+    <div class="ch-label">Capítulo III</div>
+    <div class="ch-title">Las personas.</div>
+    <div class="ch-sub">Cuatro perfiles que viven, invierten y eligen Ayres Haus por razones distintas.</div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 14 — Personas overview ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. III · Las personas</span><span class="c">Overview</span></div>
+  <div class="bd">
+    <div class="kk">Los 4 buyer personas</div>
+    <div class="h1 md" style="margin-bottom:3mm;">Mismo proyecto, <em>cuatro relatos</em> distintos.</div>
+    <p class="bt" style="margin-bottom:5mm;">Cada persona busca, valora y se preocupa por cosas diferentes. La campaña tiene que hablarles a las cuatro sin perder la unidad del mensaje madre.</p>
+    <div class="g2x2" style="flex:1;">
+      <div class="pc">
+        <div class="pn">01</div>
+        <div class="pt">Lucía y Federico</div>
+        <div class="pb">Familia 32–42 con hijos chicos. Salen de CABA buscando calidad de vida sin perder cercanía. Quieren que el hijo vuelva a la vereda.</div>
+        <div class="ptg">Mensaje madre: "El barrio donde tu hijo crece afuera."</div>
+      </div>
+      <div class="pc">
+        <div class="pn">02</div>
+        <div class="pt">Sebastián</div>
+        <div class="pb">Inversor 45–60 que busca diversificar con revalorización y renta de bajo mantenimiento. Gestiona a distancia.</div>
+        <div class="ptg">Mensaje madre: "Una inversión que también es una decisión de vida."</div>
+      </div>
+      <div class="pc">
+        <div class="pn">03</div>
+        <div class="pt">María Inés y Jorge</div>
+        <div class="pb">Pareja 55–70 en downsizing. Dejan casa grande en Z Norte sin perder calidad ni seguridad.</div>
+        <div class="ptg">Mensaje madre: "Una casa que te cuida como vos cuidaste a tu familia."</div>
+      </div>
+      <div class="pc">
+        <div class="pn">04</div>
+        <div class="pt">El vecino actual</div>
+        <div class="pb">Habitante de Benavidez que gana con la valorización del barrio y la mejora del entorno.</div>
+        <div class="ptg">Mensaje madre: "Crecemos con vos."</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>14 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 15 — Persona 1 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. III · Las personas</span><span class="c">Persona 01 — Lucía y Federico</span></div>
+  <div class="bd">
+    <div class="phero">
+      <div class="pnum">01</div>
+      <div>
+        <div class="pname">Lucía y Federico</div>
+        <div class="pdesc">Familia 32–42 · hijos 0–8 años · ingreso familiar USD 4.500–9.000/mes · GBA Norte</div>
+      </div>
+    </div>
+    <div class="pgrid">
+      <div class="pb">
+        <h4>Gains — Qué buscan</h4>
+        <ul>
+          <li>Patio propio, naturaleza, aire para los chicos.</li>
+          <li>Que el hijo pueda volver a la vereda.</li>
+          <li>Colegios cerca (Newman, Saint Francis, El Faro).</li>
+          <li>Comunidad de vecinos en el mismo momento de la vida.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Pains — Qué los frena</h4>
+        <ul>
+          <li>Depto chico en CABA, sin patio.</li>
+          <li>El country los seduce pero la cuota los frena.</li>
+          <li>Inseguridad sobre cómo queda un proyecto de pozo.</li>
+          <li>"Está lejos, no conocemos a nadie."</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Triggers — Qué los activa</h4>
+        <ul>
+          <li>Embarazo o nacimiento del segundo hijo.</li>
+          <li>El hijo entra al jardín o a primaria.</li>
+          <li>Vencimiento de alquiler en CABA.</li>
+          <li>Un amigo se muda a Z Norte y se lo ven feliz.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Objeciones — Qué hay que responder</h4>
+        <ul>
+          <li>"¿Cómo cuido al chico cuando entra el plomero?"</li>
+          <li>"¿Cómo es la zona realmente?"</li>
+          <li>"Es de pozo, no sé cómo va a quedar."</li>
+          <li>"¿Hay colegio cerca?"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pmsg">
+      <div class="pml">Mensaje madre</div>
+      <div>
+        <div class="pmh">El barrio donde tu hijo crece afuera.</div>
+        <div class="pmb">Plaza, club a 200 metros, paisajismo nativo y vecinos en el mismo momento que vos. Con seguridad inteligente 24/7 cuidando cada acceso.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>15 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 16 — Persona 2 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. III · Las personas</span><span class="c">Persona 02 — Sebastián</span></div>
+  <div class="bd">
+    <div class="phero">
+      <div class="pnum">02</div>
+      <div>
+        <div class="pname">Sebastián</div>
+        <div class="pdesc">Inversor 45–60 · profesional o empresario · ya tiene 1–2 propiedades · busca revalorización y renta de bajo mantenimiento</div>
+      </div>
+    </div>
+    <div class="pgrid">
+      <div class="pb">
+        <h4>Gains — Qué busca</h4>
+        <ul>
+          <li>Revalorización por entrar en pre-venta de zona en desarrollo.</li>
+          <li>Renta tradicional o temporaria con poca fricción operativa.</li>
+          <li>Que la propiedad "se cuide sola" sin ir a Benavidez.</li>
+          <li>Dólar como reserva de valor.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Pains — Qué lo frena</h4>
+        <ul>
+          <li>Gestionar inquilinos a distancia es un dolor de cabeza.</li>
+          <li>Property management cobra 10–15% y hay problemas igual.</li>
+          <li>La revalorización promedio de pozo en CABA está agotada.</li>
+          <li>No conoce la zona ni el track record del desarrollador.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Triggers — Qué lo activa</h4>
+        <ul>
+          <li>Lanzamiento comercial con cifras claras.</li>
+          <li>Promo de pre-venta o beneficio fiscal.</li>
+          <li>Liquidez reciente lista para reinvertir.</li>
+          <li>Ver que el QR + facial resuelve los alquileres temporarios.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Objeciones — Qué hay que responder</h4>
+        <ul>
+          <li>"¿Y si no se vende el resto del barrio?"</li>
+          <li>"¿Cómo controlo desde Capital quién entra?"</li>
+          <li>"¿Qué pasa si el inquilino se queda con el acceso?"</li>
+          <li>"¿La tecnología es realmente confiable?"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pmsg">
+      <div class="pml">Mensaje madre</div>
+      <div>
+        <div class="pmh">Una inversión que también es una decisión de vida.</div>
+        <div class="pmb">Cada inquilino entra con su propio acceso, que vence solo. Vos ves quién entró, cuándo, y gestionás todo desde tu celular. Propiedad lista para revalorizarse con la zona.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>16 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 17 — Persona 3 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. III · Las personas</span><span class="c">Persona 03 — María Inés y Jorge</span></div>
+  <div class="bd">
+    <div class="phero">
+      <div class="pnum">03</div>
+      <div>
+        <div class="pname">María Inés y Jorge</div>
+        <div class="pdesc">Pareja 55–70 · hijos independizados · hoy en casa grande en Pilar / Boulogne / San Isidro</div>
+      </div>
+    </div>
+    <div class="pgrid">
+      <div class="pb">
+        <h4>Gains — Qué buscan</h4>
+        <ul>
+          <li>Una casa más chica pero igual de digna.</li>
+          <li>Menos carga de mantenimiento (jardín, pileta, personal).</li>
+          <li>Seguridad que funcione sin gestionar nadie.</li>
+          <li>Quedarse cerca de los nietos en Z Norte.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Pains — Qué los frena</h4>
+        <ul>
+          <li>Cuidar una casa grande los agota.</li>
+          <li>Personal de casa: rotación, problemas, costos.</li>
+          <li>Miedo creciente a la inseguridad.</li>
+          <li>"¿Y si me caigo y no me ve nadie?"</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Triggers — Qué los activa</h4>
+        <ul>
+          <li>Jubilación reciente.</li>
+          <li>Un susto de salud propio o cercano.</li>
+          <li>Subida de costos de la casa actual.</li>
+          <li>Recomendación de amigos que ya se mudaron.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Objeciones — Qué hay que responder</h4>
+        <ul>
+          <li>"No manejo bien el celular."</li>
+          <li>"Quiero alguien físico que me reciba."</li>
+          <li>"No conozco bien Benavidez."</li>
+          <li>"¿Y si hay una emergencia médica?"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pmsg">
+      <div class="pml">Mensaje madre</div>
+      <div>
+        <div class="pmh">Una casa que te cuida como vos cuidaste a tu familia.</div>
+        <div class="pmb">Cerradura con huella si no querés sacar el celular. Botón de emergencia al alcance. Operador real que escucha y actúa. La calidad que te merecés en esta etapa.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>17 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 18 — Persona 4 ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. III · Las personas</span><span class="c">Persona 04 — El vecino actual</span></div>
+  <div class="bd">
+    <div class="phero">
+      <div class="pnum">04</div>
+      <div>
+        <div class="pname">El vecino actual</div>
+        <div class="pdesc">30–65 · ya vive en Benavidez · no es comprador del proyecto, pero gana con la valorización del barrio</div>
+      </div>
+    </div>
+    <div class="pgrid">
+      <div class="pb">
+        <h4>Gains — Qué busca</h4>
+        <ul>
+          <li>Que la zona se desarrolle y suba el valor de su propiedad.</li>
+          <li>Más servicios cerca: comercios, transporte, iluminación.</li>
+          <li>Mejora urbanística general del entorno.</li>
+          <li>Mejor seguridad de cuadra alrededor del distrito.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Pains — Qué le preocupa</h4>
+        <ul>
+          <li>Miedo a un proyecto cerrado que no le sume nada.</li>
+          <li>Ruido y polvo de obra prolongado.</li>
+          <li>Sentir que "el proyecto no es para él".</li>
+          <li>Mayor tránsito en la zona.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Triggers — Qué lo activa</h4>
+        <ul>
+          <li>Ve la cartelería del proyecto en la zona.</li>
+          <li>Lee una nota local sobre el desarrollo.</li>
+          <li>Un familiar le pregunta qué se construye.</li>
+          <li>Nota mejoras en la cuadra.</li>
+        </ul>
+      </div>
+      <div class="pb">
+        <h4>Objeciones — Qué hay que responder</h4>
+        <ul>
+          <li>"Esto solo le sirve a los nuevos vecinos."</li>
+          <li>"Me van a llenar el tránsito."</li>
+          <li>"La obra me afecta hoy y los beneficios son para otros."</li>
+          <li>"No me consultaron nada."</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pmsg">
+      <div class="pml">Mensaje madre</div>
+      <div>
+        <div class="pmh">Crecemos con vos.</div>
+        <div class="pmb">Cuando una zona se desarrolla con seriedad, todos ganamos. Tu propiedad vale más, tu cuadra se cuida mejor, tu barrio gana. Ayres y Fides están sumando al barrio, no aislándose de él.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>18 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 19 — CHAPTER IV ===== -->
+<div class="slide chap">
+  <div class="chi">
+    <div class="ch-ghost">IV</div>
+    <div class="ch-label">Capítulo IV</div>
+    <div class="ch-title">La conexión.</div>
+    <div class="ch-sub">Cómo lo que dice Ayres y lo que dice Fides se vuelven una sola promesa.</div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 20 — Mapa de integración ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. IV · La conexión</span><span class="c">Mapa de integración</span></div>
+  <div class="bd">
+    <div class="kk">El mapa de integración</div>
+    <div class="h1 md" style="margin-bottom:2mm;">Cada promesa de Ayres tiene <em>su capa Fides</em>.</div>
+    <div class="conn">
+      <div class="cth">Lo que dice Ayres</div>
+      <div class="cth ctr">vía</div>
+      <div class="cth">Lo que aporta Fides</div>
+
+      <div class="ca">Distrito de 23.000 m² verde y seguro.</div>
+      <div class="cx">×</div>
+      <div class="cf">Perímetro con analítica de video, central 24/7, protocolos definidos.</div>
+
+      <div class="ca">5 pilares: urbanismo, paisaje, seguridad, tecnología, sustentabilidad.</div>
+      <div class="cx">×</div>
+      <div class="cf">Fides es co-responsable de los pilares seguridad y tecnología.</div>
+
+      <div class="ca">Cerradura digital incluida en cada unidad desde fábrica.</div>
+      <div class="cx">×</div>
+      <div class="cf">Ecosistema Concierge integrado y activo desde el día uno.</div>
+
+      <div class="ca">Club Newman, colegios y naturaleza alrededor.</div>
+      <div class="cx">×</div>
+      <div class="cf">Concierge vigila el perímetro externo además del interno del distrito.</div>
+
+      <div class="ca">Pre-venta desde pozo.</div>
+      <div class="cx">×</div>
+      <div class="cf">Cámaras, alarma y monitoreo operando durante toda la obra.</div>
+
+      <div class="ca">Inversión y renta de alto estándar.</div>
+      <div class="cx">×</div>
+      <div class="cf">Accesos por QR temporal y facial por período de contrato.</div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>20 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 21 — CHAPTER V ===== -->
+<div class="slide chap">
+  <div class="chi">
+    <div class="ch-ghost">V</div>
+    <div class="ch-label">Capítulo V</div>
+    <div class="ch-title">El plan orgánico.</div>
+    <div class="ch-sub">Una serie documental que sigue la obra y construye marca con cada hito.</div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 22 — Roadmap orgánico ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. V · El plan orgánico</span><span class="c">Roadmap por fase de obra</span></div>
+  <div class="bd">
+    <div class="kk">Eje narrativo del año</div>
+    <div class="h1 md" style="margin-bottom:2mm;">"Ayres Haus, <em>del plano a la vida</em>."</div>
+    <p class="bt" style="margin-bottom:5mm;">Una serie de 8–12 capítulos cortos que documenta cada fase del proyecto en clave de marca conjunta. Mismo hilo narrativo durante todo el año.</p>
+    <div class="rm">
+      <div class="rmr">
+        <div class="rmph">Fase 1<span class="rpn">Pozo / fundaciones</span></div>
+        <div class="rmac">Reel "5 pilares", carrusel "Anatomía del distrito según Concierge", post LinkedIn B2B, stories takeover de mesa de obra. Documentamos decisiones, no obra física.</div>
+      </div>
+      <div class="rmr">
+        <div class="rmph">Fase 2<span class="rpn">Estructura / mampostería</span></div>
+        <div class="rmac">Reel "Cuando la seguridad es estructural", carrusel del checklist invisible, mini-doc con BMA o Pereyra Iraola sobre la integración tecnología-arquitectura.</div>
+      </div>
+      <div class="rmr">
+        <div class="rmph">Fase 3<span class="rpn">Terminaciones</span></div>
+        <div class="rmac">Reel "La primera cerradura instalada", stories del tour por la unidad modelo con el operador, primer testimonial real de un residente.</div>
+      </div>
+      <div class="rmr">
+        <div class="rmph">Fase 4<span class="rpn">Pre-entrega / lanzamiento</span></div>
+        <div class="rmac">Pieza institucional 90s, caso de éxito en sitio Fides con landing dedicada, press release conjunto a medios del sector.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>22 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 23 — Posteos teaser ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. V · El plan orgánico</span><span class="c">Ejemplos de posteos · Fase teaser</span></div>
+  <div class="bd">
+    <div class="kk">Posteos para fase teaser</div>
+    <div class="h1 sm" style="margin-bottom:4mm;">Acompañamos sin <em>revelar</em>.</div>
+    <div class="posts-row">
+
+      <div class="pm">
+        <div class="pmh2">
+          <div class="av">F</div>
+          <div><div class="hn">fides_tech</div><div class="tp">Reel · 15s</div></div>
+        </div>
+        <div class="pimg">
+          <div class="it">"Algo nuevo se está pensando.<br>Para vivir mejor,<br>naturalmente."</div>
+        </div>
+        <div class="ptag2">Reel · Fase teaser</div>
+        <div class="pcap">
+          <div class="cc">"Algo nuevo se está pensando en Benavidez. Dos equipos, una misma idea: una forma de habitar que se adelanta a su tiempo."</div>
+          @ayresdesarrollos · #AlgoNuevoEstáLlegando
+        </div>
+      </div>
+
+      <div class="pm">
+        <div class="pmh2">
+          <div class="av">F</div>
+          <div><div class="hn">fides_tech</div><div class="tp">Carrusel · 6 slides</div></div>
+        </div>
+        <div class="pimg dk">
+          <div class="it">"Una nueva forma<br>de vivir Benavidez."</div>
+        </div>
+        <div class="ptag2">Carrusel · Fase teaser</div>
+        <div class="pcap">
+          <div class="cc">"Pensar el barrio en serio es pensar la calidad de vida que ofrece. Estamos trabajando con @ayresdesarrollos en algo nuevo."</div>
+          #AlgoNuevoEstáLlegando
+        </div>
+      </div>
+
+      <div class="pm">
+        <div class="pmh2">
+          <div class="av g2">A</div>
+          <div><div class="hn">ayresdesarrollos</div><div class="tp">Reel · 20s</div></div>
+        </div>
+        <div class="pimg gd2">
+          <div class="it">"Antes de que abras la puerta, alguien ya pensó cómo cuidarla."</div>
+        </div>
+        <div class="ptag2">Reel · Fase teaser</div>
+        <div class="pcap">
+          <div class="cc">"El operador conoce el barrio antes que vos. Concierge by @fides_tech."</div>
+          #AlgoNuevoEstáLlegando
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>23 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 24 — Posteos reveal ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. V · El plan orgánico</span><span class="c">Ejemplos de posteos · Fase reveal</span></div>
+  <div class="bd">
+    <div class="kk">Posteos para fase reveal</div>
+    <div class="h1 sm" style="margin-bottom:4mm;">Activamos <em>"Vivir afuera"</em>.</div>
+    <div class="posts-row">
+
+      <div class="pm">
+        <div class="pmh2">
+          <div class="av g2">A</div>
+          <div><div class="hn">ayresdesarrollos</div><div class="tp">Reel · 60s · Pieza ancla</div></div>
+        </div>
+        <div class="pimg dk">
+          <div class="it big">"Vivir <em style="color:var(--gd);">afuera</em>,<br>otra vez."</div>
+        </div>
+        <div class="ptag2">Reel ancla · Reveal</div>
+        <div class="pcap">
+          <div class="cc">"En contacto con la naturaleza, con tus vecinos, con tu barrio. Una nueva forma de habitar Z Norte. Concierge 24/7 por @fides_tech."</div>
+          ayreshausbenavidez.com.ar
+        </div>
+      </div>
+
+      <div class="pm">
+        <div class="pmh2">
+          <div class="av">F</div>
+          <div><div class="hn">fides_tech</div><div class="tp">Carrusel · 8 slides</div></div>
+        </div>
+        <div class="pimg">
+          <div class="it">"Cómo se cuida un barrio diseñado en 2026."</div>
+        </div>
+        <div class="ptag2">Carrusel educativo</div>
+        <div class="pcap">
+          <div class="cc">"Un barrio que nació pensado para cuidarte de la forma más avanzada. Perímetro, accesos, central y cerradura inteligente integrados."</div>
+          @ayresdesarrollos
+        </div>
+      </div>
+
+      <div class="pm">
+        <div class="pmh2">
+          <div class="av g2">A</div>
+          <div><div class="hn">ayresdesarrollos</div><div class="tp">Reel · 30s</div></div>
+        </div>
+        <div class="pimg gd2">
+          <div class="it">"No todas las inversiones<br>se viven."</div>
+        </div>
+        <div class="ptag2">Reel · Inversor</div>
+        <div class="pcap">
+          <div class="cc">"Una propiedad que se revaloriza. Una vida que mejora desde el primer día. Diseño BMA + Pereyra Iraola + Concierge by Fides."</div>
+          @fides_tech
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>24 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 25 — CHAPTER VI ===== -->
+<div class="slide chap">
+  <div class="chi">
+    <div class="ch-ghost">VI</div>
+    <div class="ch-label">Capítulo VI</div>
+    <div class="ch-title">El plan publicitario.</div>
+    <div class="ch-sub">Cinco campañas que trabajan en paralelo. Cada una con su rol y su audiencia.</div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 26 — Las 5 campañas ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. VI · El plan publicitario</span><span class="c">Las 5 campañas</span></div>
+  <div class="bd">
+    <div class="kk">Las cinco campañas y su creativo de muestra</div>
+    <div class="h1 sm" style="margin-bottom:3mm;">Cada una con su rol y su <em>creativo de muestra</em>.</div>
+    <div class="adb">
+      <div class="adr">
+        <div class="af">
+          <div class="afl">Campaña 1 · Pre-venta Meta · Paga Ayres</div>
+          <div class="afc"><strong>"Una nueva forma de vivir Benavidez"</strong> — Hook: vereda al atardecer, familia caminando. Cierre: <em>"Casas y deptos premium con seguridad inteligente Concierge 24/7."</em></div>
+        </div>
+        <div class="af">
+          <div class="afl">Campaña 2 · Lead B2B LinkedIn · Paga Fides</div>
+          <div class="afc"><strong>"Seguridad inteligente diseñada desde el plano"</strong> — Render aéreo + texto: <em>"Una nueva categoría de seguridad residencial."</em> CTA: <em>"Si desarrollás, conversemos."</em></div>
+        </div>
+      </div>
+      <div class="adr">
+        <div class="af">
+          <div class="afl">Campaña 3 · Google Search · Paga Ayres</div>
+          <div class="afc"><strong>Keywords:</strong> <em>departamentos en benavidez, pre-venta zona norte 2026.</em> Anuncio menciona seguridad inteligente integrada como diferencial de proyecto.</div>
+        </div>
+        <div class="af">
+          <div class="afl">Campaña 4 · Retargeting cruzado · Paga cada uno</div>
+          <div class="afc"><strong>Ad 4.1</strong> retarget visitantes Ayres + <strong>Ad 4.2</strong> retarget visitantes Fides con caso Ayres Haus como prueba. Levanta conversión de ambos sitios.</div>
+        </div>
+      </div>
+      <div class="adr">
+        <div class="af">
+          <div class="afl">Campaña 5 · YouTube pre-roll · Paga 50/50</div>
+          <div class="afc">Versión 30s del Reel ancla "Vivir afuera" en formato 16:9 + bumper 6s. Audiencias: afinidad real estate, family content y Z Norte.</div>
+        </div>
+        <div class="af dk">
+          <div class="afl">Inversión sugerida mes 1</div>
+          <div class="afc"><em>USD 4.000 totales — USD 2.500 Ayres + USD 1.500 Fides — para testing real con datos confiables. Escalamos lo que funciona desde la semana 2.</em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>26 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 27 — Storyboard pieza ancla ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. VI · El plan publicitario</span><span class="c">Storyboard pieza ancla · "Vivir afuera"</span></div>
+  <div class="bd">
+    <div class="kk">Pieza ancla · Reel 60s</div>
+    <div class="h1 sm" style="margin-bottom:3mm;">El activo creativo del <em>año</em>.</div>
+    <div class="admeta">
+      <span><strong>Formato:</strong> Reel 9:16 + versión 16:9 para YouTube</span>
+      <span><strong>Duración:</strong> 60s + bumper 6s</span>
+      <span><strong>Distribución:</strong> Feed Ayres + Feed Fides simultáneo</span>
+    </div>
+    <div class="adb">
+      <div class="adr">
+        <div class="af">
+          <div class="afl">0–6s · Hook</div>
+          <div class="afc">Niños jugando en una vereda al atardecer. Texto en pantalla: <em>"Hay vida que solo pasa afuera."</em></div>
+        </div>
+        <div class="af">
+          <div class="afl">6–20s · Promesa</div>
+          <div class="afc">Alguien corre al amanecer, familia merienda en la plaza, vecinos en la vereda, Club Newman a 200m. VO: <em>"En Ayres Haus, el barrio se diseñó para invitar a salir."</em></div>
+        </div>
+        <div class="af">
+          <div class="afl">20–40s · Pilares</div>
+          <div class="afc">Paisajismo Juli Markl + central Concierge + cerradura digital + app. VO: <em>"Paisajismo nativo, tecnología de vanguardia, seguridad inteligente 24/7."</em></div>
+        </div>
+      </div>
+      <div class="adr">
+        <div class="af">
+          <div class="afl">40–55s · Marca</div>
+          <div class="afc">Aéreo del distrito (render). VO: <em>"Distrito Ayres Benavidez. Ayres Desarrollos con Concierge by Fides Tech."</em></div>
+        </div>
+        <div class="af">
+          <div class="afl">55–60s · Cierre</div>
+          <div class="afc">Texto: <em>"Vivir afuera, otra vez."</em> Logos Ayres + Fides sobre fondo cream.</div>
+        </div>
+        <div class="af gd3">
+          <div class="afl">Producción estimada</div>
+          <div class="afc"><em>USD 8.000–12.000 con productora boutique, 1 día de rodaje, 2 días de post. Activo reutilizable durante todo el año.</em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>27 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 28 — Operativa + KPIs ===== -->
+<div class="slide">
+  <div class="sh"><span class="b">Cap. VII · Operativa</span><span class="c">Cómo funciona el partnership día a día</span></div>
+  <div class="bd">
+    <div class="kk">Operativa del partnership</div>
+    <div class="h1 sm" style="margin-bottom:4mm;">Una <em>rutina</em> que sostiene la campaña.</div>
+    <div class="tc">
+      <div class="col">
+        <div class="sbh">Roles y rituales</div>
+        <ul class="dl" style="margin-top:3mm;">
+          <li><strong>Reunión mensual de contenido</strong> (30 min). Salir con lista de tomas, fechas, quién postea primero, hashtags.</li>
+          <li><strong>Un punto de contacto por marca.</strong> Aprueba todo lo que sale con su logo.</li>
+          <li><strong>Carpeta compartida en Drive</strong> con brand-kit, renders, tomas de obra y piezas aprobadas.</li>
+          <li><strong>Reshare obligatorio en ≤ 48 hs.</strong></li>
+          <li><strong>Hashtag canónico compartido</strong> a definir con el equipo de Ayres.</li>
+          <li><strong>Acuerdo escrito</strong> de uso recíproco de marca, derechos de imagen y atribución.</li>
+        </ul>
+        <div class="sbh" style="margin-top:5mm;">Próximos pasos</div>
+        <ul class="dl" style="margin-top:2mm;">
+          <li>Presentar este deck a Ayres como propuesta formal.</li>
+          <li>Validar las 4 personas con su equipo comercial.</li>
+          <li>Producir la pieza ancla "Vivir afuera".</li>
+          <li>Activar las 5 campañas con el presupuesto de testing.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="sbh">KPIs cruzados</div>
+        <div class="kpi2x2" style="margin-top:3mm;">
+          <div class="kti">
+            <div class="kn">Leads Ayres</div>
+            <div class="kt">Atribución directa</div>
+            <div class="kd">Leads de unidades desde campañas conjuntas. Medición semanal.</div>
+          </div>
+          <div class="kti">
+            <div class="kn">Leads Fides</div>
+            <div class="kt">B2B + B2C</div>
+            <div class="kd">Leads de Concierge atribuidos al hilo Ayres Haus. Semanal.</div>
+          </div>
+          <div class="kti">
+            <div class="kn">Cross-followers</div>
+            <div class="kt">Mensual</div>
+            <div class="kd">Followers ganados por menciones cruzadas en ambas cuentas.</div>
+          </div>
+          <div class="kti">
+            <div class="kn">Prensa</div>
+            <div class="kt">Menciones</div>
+            <div class="kd">Notas que nombran a ambas marcas en el mismo artículo. Mensual.</div>
+          </div>
+        </div>
+        <div style="margin-top:4mm; padding:3.5mm 5mm; background:var(--nv); border-radius:1.5mm;">
+          <div style="font-family:Helvetica,Arial,sans-serif; font-size:6pt; font-weight:700; letter-spacing:0.28em; text-transform:uppercase; color:var(--gd); margin-bottom:1.5mm;">Revisión de campañas</div>
+          <div style="font-family:Georgia,serif; font-size:8.5pt; color:var(--cr); line-height:1.45; opacity:.88;">Semana 2: primera lectura de CPLs. Pausa lo que supera el threshold. Escala lo que lo cumple. Revisión semanal los primeros 30 días.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf"><span>Fides × Ayres Haus Benavidez</span><span>28 / 29</span></div>
+</div>
+
+<!-- ===== SLIDE 29 — FINAL ===== -->
+<div class="slide final">
+  <div class="fii">
+    <h1>"La calidad de vida se diseña.<br>No se improvisa."</h1>
+    <p>Una propuesta para hacer historia en Z Norte, en serio.</p>
+    <div class="rule"></div>
+    <div class="sig">Fides Tech &nbsp;×&nbsp; Ayres Desarrollos · 2026</div>
+  </div>
+</div>
+
+</body>
+</html>
