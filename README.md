@@ -9,7 +9,8 @@ Entregables organizados por pedido. Cada archivo está pensado para ejecutarse, 
 | 3 | `03-influencers-kit-adultos.md` | Perfiles target, criterios de selección, lista priorizada de nombres AR y plantilla de outreach |
 | 4 | `04-seo-fidestech.md` | Auditoría preliminar + roadmap SEO on-page, técnico y de contenidos. Keywords objetivo |
 | 5 | `05-agente-instagram.md` | Arquitectura propuesta para el agente de análisis IG: qué se puede y qué requiere credenciales |
-| 6 | `06-embajadores-thiago-ayres.md` | Lineamientos para los contenidos con Thiago Chocala y co-branding con Ayres |
+| 6 | `06-embajadores-thiago-ayres.md` | Lineamientos para los contenidos con Thiago Chocala y co-branding con Ayres Haus (orgánico + paid + operativa) |
+| 7 | `07-buyer-persona-campana-ayres.md` | Buyer personas (gains/pains/triggers/objeciones), pilares del relato Ayres+Fides y concepto creativo "Vivir afuera" |
 
 ## Tono y línea editorial (resumen rápido)
 
